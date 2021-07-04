@@ -57,7 +57,13 @@ $route['warning'] = 'auth/warning';
 $route['temp'] = 'auth/temp';
 $route['logout'] = "auth/logout";
 
-$route['auth/oauth2callback'] = "authgooglectrl/oauth2callback";
+$route['auth/oauth2callback'] = 'authgooglectrl/oauth2callback';
+
+/** Graffer Login */
+//$route['graffer_signup']['post'] = 'authgrafferctrl';
+$route['auth/signup'] = 'authgrafferctrl';
+$route['auth/login'] = 'authgrafferctrl/login';
+$route['auth/checkUser'] = 'authgrafferctrl/checkCode';
 
 $route['service'] = 'service';
 
