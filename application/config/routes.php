@@ -53,9 +53,15 @@ $route['default_controller'] = 'auth';
 
 $route['login'] = 'auth';
 $route['signup'] = 'auth/signup';
-$route['logout'] = "auth/logout";
+$route['logout'] = 'auth/logout';
 
-$route['auth/oauth2callback'] = "authgooglectrl/oauth2callback";
+$route['auth/oauth2callback'] = 'authgooglectrl/oauth2callback';
+
+/** Graffer Login */
+//$route['graffer_signup']['post'] = 'authgrafferctrl';
+$route['auth/signup'] = 'authgrafferctrl';
+$route['auth/login'] = 'authgrafferctrl/login';
+$route['auth/checkUser'] = 'authgrafferctrl/checkCode';
 
 
 $route['404_override'] = '';

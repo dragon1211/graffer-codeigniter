@@ -30,7 +30,7 @@
                   <span class="h6 login-separator--text">または</span>
                   <hr>
                 </div>
-                <form action="#">
+                <form action="auth/login" method="post">
                   <div class="column">
                     <div class="control has-icons-left">
                       <input type="email" name="email" class="input" placeholder="メールアドレス" data-testid="email-input" value>

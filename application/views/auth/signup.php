@@ -26,7 +26,7 @@
                   <span class="h6 login-separator--text">または</span>
                   <hr>
                 </div>
-                <form action="#" >
+                <form action="auth/signup" method="post">
                   <div class="column">
                     <div class="columns">
                       <div class="column">
@@ -65,7 +65,7 @@
                   </div>
                   <div class="column">
                     <div class="has-text-centered">
-                      <button  data-testid="login-button" type="submit" class="button is-fullwidth button-module_primary__3rx99">
+                      <button id="submit" data-testid="login-button" type="submit" class="button is-fullwidth button-module_primary__3rx99">
                       Grafferアカウントでログイン
                       </button>
                     </div>
