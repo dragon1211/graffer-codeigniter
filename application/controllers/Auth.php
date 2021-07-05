@@ -15,6 +15,18 @@ class Auth extends CI_Controller {
 		$this->load->view('auth/login',$data);
 		$this->load->view('auth/footer');
 	}
+	public function warning(){
+		$data['google_login_url']=$this->google->get_login_url(); //get google url
+		$this->load->view('auth/header', $data);
+		$this->load->view('auth/wrong-pwd',$data);
+		$this->load->view('auth/footer',$data);
+	}
+	public function temp(){
+		
+		$this->load->view('auth/header');
+		$this->load->view('auth/temp-signup');
+		$this->load->view('auth/footer');
+	}
 
 	public function signup(){
 

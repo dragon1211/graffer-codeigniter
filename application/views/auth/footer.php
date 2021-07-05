@@ -21,13 +21,13 @@
         </div>
     </div>
 </body>
-<script src=<?php base_url("assets/js/jquery/jquery.min.js")?>></script>
-<script src=<?php base_url("assets/js/analytics.js")?>></script>
-<script src=<?php base_url("assets/js/gtm.js")?>></script>
-<script src=<?php base_url("assets/js/linkid.js")?>></script>
-<script src=<?php base_url("assets/js/raven.min.js")?>></script>
-<script src=<?php base_url("assets/js/ytag.js")?>></script>
-<script src=<?php base_url("assets/custom/validation.js")?>></script>
+<script src=<?php base_url("assets/login/js/jquery/jquery.min.js")?>></script>
+<script src=<?php base_url("assets/login/js/analytics.js")?>></script>
+<script src=<?php base_url("assets/login/js/gtm.js")?>></script>
+<script src=<?php base_url("assets/login/js/linkid.js")?>></script>
+<script src=<?php base_url("assets/login/js/raven.min.js")?>></script>
+<script src=<?php base_url("assets/login/js/ytag.js")?>></script>
+<script src=<?php base_url("assets/login/custom/validation.js")?>></script>
 
 <script>
       function onSignIn(googleUser) {

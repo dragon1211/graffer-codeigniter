@@ -8,10 +8,10 @@ class Google {
 		$this->CI =& get_instance();
         $this->CI->load->library('session');
 		$this->CI->load->helper('url');
-        $this->CI->config->load('google_config');
+        // $this->CI->config->load('google_config');
         $this->client = new Google_Client();
-		$this->client->setClientId($this->CI->config->item('google_client_id'));
-		$this->client->setClientSecret($this->CI->config->item('google_client_secret'));
+		$this->client->setClientId('921961180516-6i1qmk058ke6lld8ve3jc2pnrsm7busq.apps.googleusercontent.com');
+		$this->client->setClientSecret('BUWsOw8DCJ35FtD3PGigDOGZ');
 		$this->client->setRedirectUri(base_url('/auth/oauth2callback'));
 		$this->client->setScopes(array(
 			"https://www.googleapis.com/auth/plus.login",
@@ -28,6 +28,7 @@ class Google {
 
 	public function validate(){		
 		if (isset($_GET['code'])) {
+			console.log($_GET['code']);
 		  $this->client->authenticate($_GET['code']);
 		  $_SESSION['access_token'] = $this->client->getAccessToken();
 		}
@@ -40,7 +41,6 @@ class Google {
 			$info['name']=$person['displayName'];
 			$info['link']=$person['url'];
 			$info['profile_pic']=substr($person['image']['url'],0,strpos($person['image']['url'],"?sz=50")) . '?sz=800';
-
 		   return  $info;
 		}
 
