@@ -28,7 +28,6 @@ class Google {
 
 	public function validate(){		
 		if (isset($_GET['code'])) {
-			console.log($_GET['code']);
 		  $this->client->authenticate($_GET['code']);
 		  $_SESSION['access_token'] = $this->client->getAccessToken();
 		}

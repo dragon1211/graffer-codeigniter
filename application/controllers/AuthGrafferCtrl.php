@@ -137,10 +137,8 @@ class AuthGrafferCtrl extends CI_Controller {
                 echo 'login sussess';
 				
 			} else {
-				
 				// login failed
 				$data->error = 'Wrong username or password.';
-				
 				// send error to the view
 				// $this->load->view('header');
 				// $this->load->view('user/login/login', $data);

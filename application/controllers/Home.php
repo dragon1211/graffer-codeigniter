@@ -6,6 +6,8 @@ class Home extends CI_Controller {
         $this->load->model('general_model');
         $this->load->library('google');
 		$this->load->helper('url');
+		$this->load->library('session');
+
     }
 
 	public function index(){
@@ -13,8 +15,4 @@ class Home extends CI_Controller {
 		$this->load->view('home/home');
 		$this->load->view('home/footer');
 	}
-	
-    public function login(){
-
-    }
 }
