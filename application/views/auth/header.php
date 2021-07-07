@@ -27,6 +27,6 @@
                   <div class="column is-centered">
                     <div class="column is-6" style="margin: auto;">
                       <header class="has-text-centered mb-5">
-                        <img src="./assets/login/logo.svg" alt="Graffer" width="120px">
+                        <img src="<?php echo base_url()?>assets/login/logo.svg" alt="Graffer" width="120px">
                         <p class="title is-size-5 has-text-centered" data-testid="name">法人証明書請求</p>
                       </header>

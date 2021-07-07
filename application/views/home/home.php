@@ -149,6 +149,6 @@
             </div>
         </section>
         <div class="container-fluid">
-            <figure class="image"><img src="https://graffer.jp/img/graffer/city-panorama.jpg"></figure>
+            <figure class="image"><img src="<?php echo base_url()?>/assets/home/img/city-panorama.jpg"></figure>
         </div>
         

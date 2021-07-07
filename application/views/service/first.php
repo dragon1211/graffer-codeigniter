@@ -10,7 +10,7 @@
                 <div class="container">
                     <div class="navbar-brand">
                         <a class="navbar-item">
-                            <img src="assets/home/img/logo.png" alt="Logo">
+                            <img src="<?php echo base_url()?>assets/home/img/logo.png" alt="Logo">
                             <span class="is-size-7 has-text-weight-bold" style="padding-left:5px;">法人証明書請求</span>
                         </a>
                         <div id="navbarBurger" data-target="navMenuDocumentation" class="navbar-burger burger">
@@ -322,7 +322,7 @@
                                 <p class="has-text-grey-dark has-text-right">Graffer, Inc. All Rights Reserved.</p>
                                 <br>
                                 <div>
-                                    <img src="/assets/home/img/mark.svg" alt="ISMS" width="160">
+                                    <img src="<?php echo base_url()?>assets/home/img/mark.svg" alt="ISMS" width="160">
                                 </div>
                                 <div class="is-size-7 has-text-grey">
                                     <p>当社は、2018年6月23日に「Webサービスの開発及び運用」業務に関するISO27001(ISMS)の認証を取得し、 継続的かつ実効的なセキュリティマネジメント体制を構築しています。</p>
