@@ -2,23 +2,23 @@
 <html lang="ja" class=" wf-source-sans-pro-n4-active wf-source-sans-pro-n7-active wf-source-sans-pro-i7-active wf-source-sans-pro-i4-active wf-source-han-sans-japanese-n7-active wf-source-han-sans-japanese-n9-active wf-source-han-sans-japanese-n3-active wf-source-han-sans-japanese-n4-active wf-source-han-sans-cjk-ja-n4-active wf-source-han-sans-cjk-ja-n7-active wf-active">
 
 <head>
+    <title>Graffer, Inc. 株式会社グラファー</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="kPZO6aTbrvk3zuuurYu837OVyznoJ8pMzkWqHudO">
-    <title>Graffer, Inc. 株式会社グラファー | Graffer, Inc. 株式会社グラファー</title>
     <meta name="description" content="株式会社グラファーのオフィシャルサイト。行政手続きを効率化するための各種ウェブサービス及びソリューションを一般消費者、事業者、官公庁等に提供しています。">
     <meta name="keywords" content="株式会社グラファー, グラファー, スタートアップ, 行政, GovTech, Government Tech">
     <meta property="og:site_name" content="株式会社グラファー">
     <meta property="og:title" content="Graffer, Inc. 株式会社グラファー">
     <meta property="og:description" content="株式会社グラファーのオフィシャルサイト。行政手続きを効率化するための各種ウェブサービス及びソリューションを一般消費者、事業者、官公庁等に提供しています。">
-    <meta property="og:image" content=<?php echo base_url("assets/home/img/og-image.jpg")?>>
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@Graffer_Inc">
     <meta name="twitter:title" content="Graffer, Inc. 株式会社グラファー">
     <meta name="twitter:description" content="株式会社グラファーのオフィシャルサイト。行政手続きを効率化するための各種ウェブサービス及びソリューションを一般消費者、事業者、官公庁等に提供しています。">
+    <meta property="og:image" content=<?php echo base_url("assets/home/img/og-image.jpg")?>>
     
-    <link rel="stylesheet" href=<?php echo base_url("assets/home/css/all.css")?> integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous">
+    <link rel="stylesheet" href=<?php echo base_url("assets/home/css/all.css")?>>
     <link rel="stylesheet" href=<?php echo base_url("assets/home/css/app.css")?>>
     <link rel="icon" href=<?php echo base_url("assets/home/img/favicon.png")?> type="image/x-icon">
     <script>
@@ -114,17 +114,36 @@
                             </div>
                         </div>
                     </div>
+
+                    <?php if(isset($_SESSION['name'])){?>
+				<div class="col s12 m6 l4">
+					<div class="card ">
+			            <div class="card-image">
+			              <img src="<?=$_SESSION['profile_pic']?>">
+			              <span class="card-title"><?=$_SESSION['name']?></span>
+			            </div>
+			            <div class="card-action">
+			              <a href="#"><?=$_SESSION['name']?></a>
+			            </div>
+			        </div>
+				</div>
+			<?php }?>
                     <div class="navbar-end">
                         <a href="contact.html" class="navbar-item">お問い合わせ</a>
-                        <a href="/login" class="navbar-item">ログアウト</a>
-                        <!-- <div class="navbar-item has-dropdown" >
-                            <a href="/login" class="navbar-link is-arrowless">
-                                <span class="has-text-weight-bold has-text-grey">ログイン</span>
-                            </a>
-                            <div class="navbar-dropdown">
-                                <a href="index.html" class="navbar-item">ログアウト</a>
+
+                        <?php if(!isset($_SESSION['logged_in']) || !($_SESSION['logged_in'])){ ?>
+                            <a href="/login" class="navbar-item">ログイン</a>
+                        <?php } 
+                         else if(!isset($_SESSION['is_confirmed']) ||!$_SESSION['is_confirmed']){ ?>
+                            <div class="navbar-item has-dropdown is-hoverable" >
+                                <a class="navbar-link">
+                                    <span class="has-text-weight-bold has-text-grey">ログイン中</span>
+                                </a>
+                                <div class="navbar-dropdown">
+                                    <a href="/logout" class="navbar-item">ログアウト</a>
+                                </div>
                             </div>
-                        </div> -->
+                        <?php } ?>
                     </div>
                 </div>
             </div>

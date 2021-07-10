@@ -97,13 +97,13 @@
                     <div class="content is-size-7">
                         <div class="columns is-mobile is-vcentered">
                             <div class="column is-narrow">
-                                <div><img src="https://graffer.jp/img/isms.svg" alt="ISMS" width="160"></div>
+                                <div><img src="<?php echo base_url()?>assets/home/img/isms.svg" alt="ISMS" width="160"></div>
                                 <div>
                                     IS 689557 / ISO 27001
                                 </div>
                             </div>
                             <div class="column is-narrow">
-                                <div><img src="https://graffer.jp/img/graffer/privacy-mark.png" alt="Privacy Mark" width="80"></div>
+                                <div><img src="<?php echo base_url()?>assets/home/img/privacy-mark.png" alt="Privacy Mark" width="80"></div>
                             </div>
                             <div class="column has-text-right is-size-5">
                                 Copyright © Graffer, Inc. All Rights Reserved.
